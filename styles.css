@@ -1,23 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;    
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 500px;
+    background-color: #edf2f4;
+    color: #ef233c;
 }
 
 .container{
-    border: 1px black solid;
+    border: 1px #83c5be solid;
+    background-color: #2b2d42;
     border-radius: 20px;
     padding: 50px;
+    box-shadow: 2px 2px 2px #8d99ae;
 }
 .card-ouput{
     font-size:x-large;
+    font-weight: 600;
 }
 .btn{
-    margin: 20px;
-    color: white;
-    background-color: rgb(12, 90, 236);
+    margin: 1rem;
+    padding: 1rem 5rem;
+    color: #d90429;
+    background-color: #edf2f4;
     border-radius: 10px;
+    font-size: 1rem;
 }
