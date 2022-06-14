@@ -15,8 +15,29 @@ function generateRanNum(){
     let min = minInput.value;
     let max = maxInput.value;
     const randomNumber = Math.floor(Math.random() * (max-min + 1) + min);
+
+    //add moving numbers feature
+
     number.innerText = randomNumber;
 }
 
 //eventlistener so when button is clicked, generateRanNum is called
-button.addEventListener('click', generateRanNum);
+button.addEventListener('click', () => {
+
+        //setInterval does something over and over again 
+        const countDown = setInterval(generateRanNum, 50);
+        //disable button while countDown is running
+        button.disabled = true;
+
+        //set times for countDown and change color of number to yellow then back to original
+        //also undo button disable
+        setTimeout(() => {
+            clearInterval(countDown);
+            number.style.color = '#ffd166';
+            setTimeout(() => {
+                number.style.color = '#ef233c';
+                button.disabled = false;
+            }, 500);
+        }, 1000);
+
+});
